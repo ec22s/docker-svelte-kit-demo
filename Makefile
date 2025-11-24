@@ -2,7 +2,6 @@ SHELL=/bin/bash
 
 build_port=3000
 test_port=5173
-test_fqdn=http://127.0.0.1:
 image_name=svlete-kit-image
 container_name=svlete-kit-container
 dev_service_name=svelte-kit-dev
@@ -24,7 +23,7 @@ clean-restart:
 	make down && make up
 
 test:
-	docker exec ${container_name} sh -c "wget -q -S -O - ${test_fqdn}${build_port} > /dev/null"
+	docker exec ${container_name} sh -c "wget -q -S -O - http://127.0.0.1:${build_port} > /dev/null"
 
 dev-up:
 	docker compose up -d --build
@@ -42,4 +41,4 @@ dev-in:
 	docker compose exec -it ${dev_service_name} sh
 
 dev-test:
-	docker compose exec ${dev_service_name} sh -c "wget -q -S -O - ${test_fqdn}${test_port} > /dev/null"
+	docker compose exec ${dev_service_name} sh -c "wget -q -S -O - http://localhost:${test_port} > /dev/null"
