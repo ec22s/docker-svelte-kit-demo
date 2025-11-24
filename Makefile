@@ -41,5 +41,5 @@ dev-in:
 	docker compose exec -it ${dev_service_name} sh
 
 dev-test:
-	# docker compose exec ${dev_service_name} sh -c "wget -q -S -O - http://localhost:${test_port} > /dev/null"
-	curl --head http://localhost:${test_port}
+	docker compose exec ${dev_service_name} sh -c "wget -q -S -O - http://localhost:${test_port} > /dev/null"
+	# curl --head http://localhost:${test_port}
