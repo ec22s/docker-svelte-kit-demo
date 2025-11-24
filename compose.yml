@@ -1,0 +1,13 @@
+services:
+  svelte-kit-dev:
+    # container_name: svelte-kit-dev
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    ports:
+      - 5173:5173
+      - 24678:24678
