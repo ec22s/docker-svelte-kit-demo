@@ -1,6 +1,6 @@
 # docker-svelte-kit-demo
 
-<a href="https://github.com/ec22s/docker-svelte-kit-demo/actions/workflows/test.yml"><img src="https://github.com/ec22s/docker-svelte-kit-demo/workflows/Test/badge.svg"></a>
+<a href="https://github.com/ec22s/docker-svelte-kit-demo/actions/workflows/test.yml"><img src="https://github.com/ec22s/docker-svelte-kit-demo/workflows/Build/badge.svg"></a>
 
 - 2025年11月 最新のSvelteに付属のデモアプリをDockerコンテナにしたもの
 
